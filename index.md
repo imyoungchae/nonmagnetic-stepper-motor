@@ -20,7 +20,7 @@ h1.title {
 </div>
 <div class="has-text-centered" style="margin-top: 0.8rem; margin-bottom: 1rem;">
   <p class="is-size-5" style="font-weight: 600;">
-    Manuscript submitted to Measurement
+    UnderReview
   </p>
 </div>
 <div class="has-text-centered" style="margin-bottom: 2rem;">
