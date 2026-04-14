@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Automated Measurement of Magnetic Field Uniformity in Helmholtz Coils Using a Nonmagnetic Stepper Motor</title>
+  <style>
+    /* ── Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Georgia', serif;
+      background: #f8f9fb;
+      color: #1a1a2e;
+      line-height: 1.75;
+    }
+
+    /* ── Header / Hero ── */
+    header {
+      background: linear-gradient(135deg, #0d1b2a 0%, #1b3a5c 60%, #2e6da4 100%);
+      color: #fff;
+      padding: 60px 24px 50px;
+      text-align: center;
+    }
+    header .venue {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 20px;
+      font-size: 0.82rem;
+      letter-spacing: 0.05em;
+      padding: 4px 14px;
+      margin-bottom: 22px;
+      font-family: 'Arial', sans-serif;
+    }
+    header h1 {
+      font-size: clamp(1.4rem, 3vw, 2.1rem);
+      font-weight: 700;
+      line-height: 1.35;
+      max-width: 860px;
+      margin: 0 auto 28px;
+    }
+    .authors {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 18px;
+      font-family: 'Arial', sans-serif;
+      font-size: 0.95rem;
+      max-width: 760px;
+      margin: 0 auto 28px;
+    }
+    .authors span {
+      background: rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 4px 14px;
+    }
+    .affiliation {
+      font-size: 0.82rem;
+      opacity: 0.72;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #dde3ec;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+    nav a {
+      display: block;
+      padding: 13px 18px;
+      font-family: 'Arial', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #2e6da4;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: background 0.2s, color 0.2s;
+    }
+    nav a:hover { background: #eef4fb; color: #0d1b2a; }
+
+    /* ── Main Layout ── */
+    main {
+      max-width: 900px;
+      margin: 48px auto;
+      padding: 0 24px;
+    }
+
+    /* ── Sections ── */
+    section {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      padding: 40px 44px;
+      margin-bottom: 32px;
+    }
+    section h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #1b3a5c;
+      border-bottom: 3px solid #2e6da4;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+    section p { margin-bottom: 14px; }
+    section p:last-child { margin-bottom: 0; }
+
+    /* ── Highlight box ── */
+    .highlight-box {
+      background: #eef4fb;
+      border-left: 4px solid #2e6da4;
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin: 18px 0;
+      font-family: 'Arial', sans-serif;
+      font-size: 0.93rem;
+    }
+    .highlight-box p { margin-bottom: 6px; }
+    .highlight-box p:last-child { margin-bottom: 0; }
+    .highlight-box strong { color: #1b3a5c; }
+
+    /* ── Results cards ── */
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 18px;
+      margin: 22px 0;
+    }
+    .result-card {
+      background: linear-gradient(135deg, #1b3a5c 0%, #2e6da4 100%);
+      color: #fff;
+      border-radius: 10px;
+      padding: 22px 18px;
+      text-align: center;
+    }
+    .result-card .value {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+    .result-card .label {
+      font-size: 0.82rem;
+      opacity: 0.85;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* ── Key findings list ── */
+    ul.findings {
+      padding-left: 0;
+      list-style: none;
+    }
+    ul.findings li {
+      padding: 10px 0 10px 28px;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      font-size: 0.96rem;
+    }
+    ul.findings li:last-child { border-bottom: none; }
+    ul.findings li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #2e6da4;
+      font-weight: 700;
+    }
+
+    /* ── Table ── */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Arial', sans-serif;
+      font-size: 0.9rem;
+      margin-top: 16px;
+    }
+    .comparison-table th {
+      background: #1b3a5c;
+      color: #fff;
+      padding: 10px 14px;
+      text-align: left;
+    }
+    .comparison-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #dde3ec;
+    }
+    .comparison-table tr:nth-child(even) td { background: #f4f7fb; }
+    .comparison-table td.improved { color: #1a7f37; font-weight: 700; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 16px;
+      font-family: 'Arial', sans-serif;
+      font-size: 0.82rem;
+      color: #888;
+      border-top: 1px solid #dde3ec;
+      background: #fff;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      section { padding: 28px 20px; }
+      header { padding: 40px 16px 36px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════ HEADER ══════════════ -->
+<header>
+  <div class="venue">Korea Research Institute of Standards and Science (KRISS)</div>
+  <h1>Automated Measurement of Magnetic Field Uniformity in Helmholtz Coils Using a Nonmagnetic Stepper Motor</h1>
+  <div class="authors">
+    <span>Young-Chae Son</span>
+    <span>Sung-Jung Joo</span>
+    <span>Po-Gyu Park</span>
+    <span>Changjin Yun</span>
+    <span>Soo-Chul Lim</span>
+    <span>Hyung-Kew Lee</span>
+  </div>
+  <p class="affiliation">Korea Research Institute of Standards and Science (KRISS)</p>
+</header>
+
+<!-- ══════════════ NAV ══════════════ -->
+<nav aria-label="Page sections">
+  <a href="#background">Background</a>
+  <a href="#system">System Design</a>
+  <a href="#experiment">Experiment</a>
+  <a href="#results">Results</a>
+  <a href="#conclusion">Conclusion</a>
+</nav>
+
+<!-- ══════════════ MAIN ══════════════ -->
+<main>
+
+  <!-- Abstract -->
+  <section id="abstract">
+    <h2>Abstract</h2>
+    <p>
+      We propose an automated magnetic field uniformity measurement system for Helmholtz coils,
+      leveraging a custom-built nonmagnetic pneumatic stepper motor. To eliminate magnetic
+      interference caused by conventional electric actuators, a fully nonmagnetic motor fabricated
+      from 3D-printed ABS/PLA components and commercial syringes was developed and integrated into
+      a three-axis scanning stage.
+    </p>
+    <p>
+      The automated system scanned 125 positions within a 4.8 × 4.8 × 4.8 cm³ volume, reducing
+      total measurement time from 90 minutes to 50 minutes and operator involvement from 90 minutes
+      to just 10 minutes. Measurement uncertainty improved from ±0.11% to ±0.06%, and the measured
+      field uniformity of ±0.43% agreed with manual results within the stated uncertainty.
+    </p>
+  </section>
+
+  <!-- Background -->
+  <section id="background">
+    <h2>Background</h2>
+    <p>
+      Helmholtz coils are essential instruments for generating highly uniform magnetic fields used in
+      the calibration of magnetic sensors. Evaluating the field uniformity inside a coil requires
+      scanning a Hall sensor across a three-dimensional measurement volume.
+    </p>
+    <div class="highlight-box">
+      <p><strong>The core challenge:</strong> Conventional electric actuators generate tens to hundreds
+      of microtesla of stray magnetic field, directly corrupting precision measurements inside
+      Helmholtz coils.</p>
+    </div>
+    <p>
+      Before this work, technicians at KRISS had to physically enter the measurement space and rotate
+      a mechanical handle to perform the scan manually—a process that took more than 90 minutes per
+      session and was susceptible to human error and fatigue.
+    </p>
+  </section>
+
+  <!-- System Design -->
+  <section id="system">
+    <h2>System Design</h2>
+    <p>
+      To eliminate magnetic interference at its source, we developed a pneumatic stepper motor driven
+      entirely by compressed air—producing <em>zero</em> electromagnetic field during operation.
+    </p>
+
+    <div class="highlight-box">
+      <p><strong>Materials (100% nonmagnetic):</strong></p>
+      <p>3D-printed ABS &amp; PLA structural parts · Plastic bearings · Commercial syringes
+         repurposed as pneumatic cylinders (pistons)</p>
+    </div>
+
+    <p>
+      <strong>Operating principle:</strong> Four pistons apply air pressure sequentially to a gear
+      shaft using a <em>Lock → Push → Release</em> cycle, enabling bidirectional rotation with
+      precise angular control. The motor was mounted directly onto KRISS's existing three-axis
+      scanning stage to provide accurate positioning of the Hall sensor.
+    </p>
+    <p>
+      System control is executed remotely via pneumatic pressure regulators, keeping all electronics
+      and their associated magnetic fields at a safe distance from the measurement volume.
+    </p>
+  </section>
+
+  <!-- Experiment -->
+  <section id="experiment">
+    <h2>Experiment &amp; Measurement</h2>
+    <p>
+      The automated stage scanned the interior of a Helmholtz coil across a
+      <strong>4.8 × 4.8 × 4.8 cm³</strong> cubic volume. The Hall sensor was stepped at
+      <strong>1.2 cm intervals</strong> along each axis, yielding a uniform grid of
+      <strong>125 measurement points</strong> (5 × 5 × 5).
+    </p>
+    <p>
+      Remote pneumatic control ensured that no part of the electronic control system was near the
+      Helmholtz coil during data acquisition, completely excluding controller-induced magnetic
+      interference from the measurement. To leverage the improved repeatability of the automated
+      system, the number of Hall sensor readings per point was increased from 5 (manual) to 20,
+      directly improving statistical measurement uncertainty.
+    </p>
+  </section>
+
+  <!-- Results -->
+  <section id="results">
+    <h2>Results</h2>
+
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="value">−44%</div>
+        <div class="label">Total scanning time<br>(90 min → 50 min)</div>
+      </div>
+      <div class="result-card">
+        <div class="value">−89%</div>
+        <div class="label">Operator time<br>(90 min → 10 min)</div>
+      </div>
+      <div class="result-card">
+        <div class="value">±0.06%</div>
+        <div class="label">Measurement uncertainty<br>(improved from ±0.11%)</div>
+      </div>
+      <div class="result-card">
+        <div class="value">±0.43%</div>
+        <div class="label">Measured field uniformity<br>(matches manual result)</div>
+      </div>
+    </div>
+
+    <table class="comparison-table" aria-label="Comparison of manual vs automated system">
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Manual System</th>
+          <th>Automated System</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Total scan time</td>
+          <td>90 min</td>
+          <td class="improved">50 min</td>
+        </tr>
+        <tr>
+          <td>Operator involvement</td>
+          <td>90 min</td>
+          <td class="improved">10 min</td>
+        </tr>
+        <tr>
+          <td>Readings per point</td>
+          <td>5</td>
+          <td class="improved">20</td>
+        </tr>
+        <tr>
+          <td>Measurement uncertainty</td>
+          <td>±0.11%</td>
+          <td class="improved">±0.06%</td>
+        </tr>
+        <tr>
+          <td>Field uniformity</td>
+          <td>±0.43% (reference)</td>
+          <td class="improved">±0.43% (agrees within uncertainty)</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Conclusion -->
+  <section id="conclusion">
+    <h2>Conclusion</h2>
+    <p>
+      The nonmagnetic pneumatic stepper motor and automated scanning system developed in this work
+      enable precision magnetic field measurements without any electromagnetic disturbance. By
+      replacing manual operation with a fully automated, remotely controlled stage, we simultaneously:
+    </p>
+    <ul class="findings">
+      <li>Reduced total measurement time by ~44% (90 min → 50 min)</li>
+      <li>Cut mandatory operator time by more than 89% (90 min → 10 min)</li>
+      <li>Improved measurement uncertainty by nearly half (±0.11% → ±0.06%)</li>
+      <li>Eliminated human error and operator fatigue from the calibration workflow</li>
+      <li>Validated system integrity: automated results agree with manual reference within uncertainty</li>
+    </ul>
+    <p>
+      This technology is directly applicable to Helmholtz coil calibration services and can be
+      extended to other precision magnetic field measurement scenarios where electromagnetic
+      interference from actuators must be avoided.
+    </p>
+  </section>
+
+</main>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <p>
+    Young-Chae Son, Sung-Jung Joo, Po-Gyu Park, Changjin Yun, Soo-Chul Lim, Hyung-Kew Lee<br>
+    Korea Research Institute of Standards and Science (KRISS)
+  </p>
+  <p style="margin-top:8px;">
+    <a href="https://github.com/imyoungchae/nonmagnetic-stepper-motor"
+       style="color:#2e6da4; text-decoration:none;">
+      GitHub Repository
+    </a>
+  </p>
+</footer>
+
+</body>
+</html>
