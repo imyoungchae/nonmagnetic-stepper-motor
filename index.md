@@ -15,7 +15,7 @@ affiliations:
 </div>
 <div class="has-text-centered" style="margin-top: 0.8rem; margin-bottom: 1rem;">
   <p class="is-size-5" style="font-weight: 600;">
-    Under Review
+    Our paper has been accepted to the 2026 Conference on Precision Electromagnetic Measurements (CPEM 2026).
   </p>
 </div>
 <div class="has-text-centered" style="margin-bottom: 2rem;">
