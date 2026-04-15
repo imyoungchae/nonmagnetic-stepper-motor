@@ -9,12 +9,7 @@ affiliations:
   - ¹ Dongguk University, ² KRISS, ³ KOREA University
 ---
 
-<style>
-h1.title {
-  font-size: 1.4rem !important;
-  line-height: 1.3;
-}
-</style>
+
 <div class="is-size-6 has-text-centered" style="margin-top: -5rem; margin-bottom: 0.5rem; color: #555;">
   * Corresponding Authors
 </div>
@@ -67,7 +62,7 @@ h1.title {
 <div class="columns is-centered" style="margin-top: 1.5rem; margin-bottom: 2rem;">
   <div class="column is-four-fifths">
     <figure>
-      <img src="static/image/fig3.png" alt="Fig. 3" style="width: 60%; margin: 0 auto; display: block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <img src="static/image/fig3.png" alt="Fig. 3" style="width: 100%; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
       <figcaption style="margin-top: 0.75rem; font-size: 0.92rem; color: #444; line-height: 1.6;">
         <strong>Fig. 3.</strong> Structure of the designed pneumatic stepper motor: (a) an exploded view and (b) an assembled view with the internal structure exposed.
       </figcaption>
@@ -147,17 +142,6 @@ h1.title {
     <p>
       The automated scanning results were compared with the manual scanning baseline. The measured magnetic field uniformity was within ±0.43% for both methods, confirming that the pneumatic motor introduced no measurable magnetic interference. The automated system also reduced measurement uncertainty from ±0.11% to ±0.06% by collecting more readings per position.
     </p>
-  </div>
-</div>
-
-<div class="columns is-centered" style="margin-top: 1.5rem; margin-bottom: 2rem;">
-  <div class="column is-four-fifths">
-    <figure>
-      <img src="static/image/fig9.png" alt="Fig. 9" style="width: 60%; margin: 0 auto; display: block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-      <figcaption style="margin-top: 0.75rem; font-size: 0.92rem; color: #444; line-height: 1.6;">
-        <strong>Fig. 9.</strong> (a) Three-dimensional plot of RDBs measured with the same Helmholtz coil used in Fig. 2 by automatic scanning of 125 points using the developed stepper motors for comparison. (b) Magnetic flux densities at the center (0, 0, 0) and at the position exhibiting the largest RDB measured during three cycles of manual (B<sub>M</sub>) and automatic scanning (B<sub>A</sub>).
-      </figcaption>
-    </figure>
   </div>
 </div>
 
