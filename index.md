@@ -82,10 +82,10 @@ affiliations:
 <div class="columns is-centered" style="margin-top: 1.5rem; margin-bottom: 0;">
   <div class="column is-four-fifths">
     <div class="columns is-vcentered is-mobile" style="margin-bottom: 0;">
-      <div class="column is-half">
+      <div class="column is-7">
         <img src="static/image/fig3.png" alt="Motor structure" style="width: 100%; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
       </div>
-      <div class="column is-half">
+      <div class="column is-5">
         <img src="static/image/fig4.png" alt="Motor operation principle" style="width: 100%; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
       </div>
     </div>
