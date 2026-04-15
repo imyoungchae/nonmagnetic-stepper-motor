@@ -85,25 +85,25 @@ affiliations:
     <div style="display: flex; justify-content: center; gap: 0.5rem; margin-bottom: 1rem;">
       <button class="fig-tab-btn button is-dark is-selected" onclick="switchFigTab('fig3')" id="btn-fig3"
         style="border-radius: 999px; font-weight: 600; font-size: 0.9rem; padding: 0.5rem 1.4rem;">
-        Fig. 3 — Motor Structure
+        Fig. 1 — Motor Structure
       </button>
       <button class="fig-tab-btn button is-light" onclick="switchFigTab('fig4')" id="btn-fig4"
         style="border-radius: 999px; font-weight: 600; font-size: 0.9rem; padding: 0.5rem 1.4rem;">
-        Fig. 4 — Stepping Mechanism
+        Fig. 2 — Stepping Mechanism
       </button>
     </div>
     <!-- Fig. 3 panel -->
     <div id="panel-fig3" style="transition: opacity 0.3s ease;">
       <img src="static/image/fig3.png" alt="Motor structure" style="width: 100%; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
       <figcaption style="margin-top: 0.75rem; font-size: 0.92rem; color: #444; line-height: 1.6; text-align: center;">
-        <strong>Fig. 3.</strong> Structure of the designed pneumatic stepper motor: (a) an exploded view showing the housing, geared axle, pistons, pressure chambers, and plastic bearings, and (b) an assembled view with the internal structure exposed.
+        <strong>Fig. 1.</strong> Structure of the designed pneumatic stepper motor: (a) an exploded view showing the housing, geared axle, pistons, pressure chambers, and plastic bearings, and (b) an assembled view with the internal structure exposed.
       </figcaption>
     </div>
     <!-- Fig. 4 panel (hidden by default) -->
     <div id="panel-fig4" style="display: none; transition: opacity 0.3s ease;">
       <img src="static/image/fig4.png" alt="Motor operation principle" style="width: 100%; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
       <figcaption style="margin-top: 0.75rem; font-size: 0.92rem; color: #444; line-height: 1.6; text-align: center;">
-        <strong>Fig. 4.</strong> (a) Top view of the designed motor and views of cross-section 1 and cross-section 2 with the corresponding gears. Gear 2 is rotated by 90&deg; relative to Gear 1, which causes a rotational misalignment of 10&deg;. (b) Illustration of the gear movement at each step corresponding to the sequential pressure applied to the pistons from step 1-1 to 4-2.
+        <strong>Fig. 2.</strong> (a) Top view of the designed motor and views of cross-section 1 and cross-section 2 with the corresponding gears. Gear 2 is rotated by 90&deg; relative to Gear 1, which causes a rotational misalignment of 10&deg;. (b) Illustration of the gear movement at each step corresponding to the sequential pressure applied to the pistons from step 1-1 to 4-2.
       </figcaption>
     </div>
   </div>
@@ -164,7 +164,7 @@ function switchFigTab(target) {
     <figure>
       <img src="static/image/fig1.png" alt="Fig. 1" style="width: 100%; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
       <figcaption style="margin-top: 0.75rem; font-size: 0.92rem; color: #444; line-height: 1.6;">
-        <strong>Fig. 1.</strong> (a) Measurement system for the calibration of Helmholtz coils. The DUT Helmholtz coil is placed inside the cancellation coils with a diameter of 2 m to suppress external magnetic interference. Each coil is independently driven by a precision current source. (b) A Cs-⁴He magnetometer, used as a reference for coil constant measurement, and a Hall sensor attached to a three-dimensional manual translation stage installed inside the cancellation coils.
+        <strong>Fig. 3.</strong> (a) Measurement system for the calibration of Helmholtz coils. The DUT Helmholtz coil is placed inside the cancellation coils with a diameter of 2 m to suppress external magnetic interference. Each coil is independently driven by a precision current source. (b) A Cs-⁴He magnetometer, used as a reference for coil constant measurement, and a Hall sensor attached to a three-dimensional manual translation stage installed inside the cancellation coils.
       </figcaption>
     </figure>
   </div>
@@ -189,7 +189,7 @@ function switchFigTab(target) {
     <figure>
       <img src="static/image/fig2.png" alt="Fig. 2" style="width: 60%; margin: 0 auto; display: block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
       <figcaption style="margin-top: 0.75rem; font-size: 0.92rem; color: #444; line-height: 1.6;">
-        <strong>Fig. 2.</strong> (a) Three-dimensional grid of 125 measurement points for evaluation of magnetic field uniformity in the KRISS Helmholtz coil. (b) Three-dimensional plot of RDBs measured by manually scanning the 125 points in the grid.
+        <strong>Fig. 4.</strong> (a) Three-dimensional grid of 125 measurement points for evaluation of magnetic field uniformity in the KRISS Helmholtz coil. (b) Three-dimensional plot of RDBs measured by manually scanning the 125 points in the grid.
       </figcaption>
     </figure>
   </div>
