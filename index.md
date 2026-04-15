@@ -78,23 +78,20 @@ affiliations:
   </ul>
 </div>
 
-<!-- Fig. 3 and Fig. 4 side by side -->
-<div class="columns is-centered" style="margin-top: 1.5rem; margin-bottom: 2rem;">
-  <div class="column is-two-fifths">
-    <figure>
-      <img src="static/image/fig3.png" alt="Fig. 3" style="width: 100%; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-      <figcaption style="margin-top: 0.75rem; font-size: 0.92rem; color: #444; line-height: 1.6;">
-        <strong>Fig. 3.</strong> Structure of the designed pneumatic stepper motor: (a) an exploded view and (b) an assembled view with the internal structure exposed.
-      </figcaption>
-    </figure>
-  </div>
-  <div class="column is-two-fifths">
-    <figure>
-      <img src="static/image/fig4.png" alt="Fig. 4" style="width: 100%; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-      <figcaption style="margin-top: 0.75rem; font-size: 0.92rem; color: #444; line-height: 1.6;">
-        <strong>Fig. 4.</strong> (a) Top view of the designed motor and views of cross-section 1 and cross-section 2 with the corresponding gears. Gear 2 is rotated by 90&deg; relative to Gear 1, which causes a rotational misalignment between Gear 1 and 2 of 10&deg;. (b) Illustration of the movement of the gears at each step from step 1-1 to 4-2.
-      </figcaption>
-    </figure>
+<!-- Fig. 3 and Fig. 4 side by side with unified caption -->
+<div class="columns is-centered" style="margin-top: 1.5rem; margin-bottom: 0;">
+  <div class="column is-four-fifths">
+    <div class="columns is-vcentered is-mobile" style="margin-bottom: 0;">
+      <div class="column is-half">
+        <img src="static/image/fig3.png" alt="Motor structure" style="width: 100%; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      </div>
+      <div class="column is-half">
+        <img src="static/image/fig4.png" alt="Motor operation principle" style="width: 100%; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      </div>
+    </div>
+    <figcaption style="margin-top: 0.75rem; margin-bottom: 2rem; font-size: 0.92rem; color: #444; line-height: 1.6; text-align: center;">
+      <strong>Fig. 3 &amp; 4.</strong> (Left) Exploded and assembled views of the pneumatic stepper motor, showing the housing, geared axle, pistons, pressure chambers, and plastic bearings. (Right) The stepping mechanism: two nine-tooth gears with a 10&deg; rotational offset enable bi-directional stepwise rotation through sequential piston actuation (steps 1-1 to 4-2).
+    </figcaption>
   </div>
 </div>
 
