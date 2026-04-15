@@ -145,26 +145,11 @@ affiliations:
   </div>
 </div>
 
-<div class="box" style="background-color: #f5f5f5; border: 1px solid #e8e8e8; margin-bottom: 2rem;">
-  <div class="columns is-centered">
-    <div class="column">
-      <div class="content">
-        <h3 class="title is-5 has-text-centered">Time Efficiency</h3>
-        <p class="has-text-centered">
-          <strong>Total Time:</strong> Reduced from 90 minutes to 50 minutes.<br>
-          <strong>Human Intervention:</strong> Reduced from 90 minutes to 10 minutes.
-        </p>
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <h3 class="title is-5 has-text-centered">Measurement Uncertainty</h3>
-        <p class="has-text-centered">
-          <strong>Uniformity:</strong> ±0.43%, consistent with the manual scanning result.<br>
-          <strong>Uncertainty:</strong> Reduced from ±0.11% to ±0.06% with 20 readings per point.
-        </p>
-      </div>
-    </div>
+<div class="container is-max-desktop">
+  <div class="content has-text-justified">
+    <p>
+      In terms of time efficiency, the total scanning time was reduced from 90 minutes to 50 minutes, while the required human intervention time decreased dramatically from 90 minutes to just 10 minutes. Regarding measurement uncertainty, the magnetic field uniformity was confirmed to be within ±0.43%, which is consistent with the manual scanning result. Furthermore, by increasing the number of readings per measurement point to 20, the measurement uncertainty was reduced from ±0.11% to ±0.06%, demonstrating an improvement in measurement reliability without a significant increase in total scanning time.
+    </p>
   </div>
 </div>
 
