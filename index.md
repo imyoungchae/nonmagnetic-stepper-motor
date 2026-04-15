@@ -11,7 +11,7 @@ affiliations:
 
 <style>
 h1.title {
-  font-size: 2rem !important;
+  font-size: 1.4rem !important;
   line-height: 1.3;
 }
 </style>
@@ -67,7 +67,7 @@ h1.title {
 <div class="columns is-centered" style="margin-top: 1.5rem; margin-bottom: 2rem;">
   <div class="column is-four-fifths">
     <figure>
-      <img src="static/image/fig3.png" alt="Fig. 3" style="width: 100%; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <img src="static/image/fig3.png" alt="Fig. 3" style="width: 60%; margin: 0 auto; display: block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
       <figcaption style="margin-top: 0.75rem; font-size: 0.92rem; color: #444; line-height: 1.6;">
         <strong>Fig. 3.</strong> Structure of the designed pneumatic stepper motor: (a) an exploded view and (b) an assembled view with the internal structure exposed.
       </figcaption>
@@ -84,7 +84,7 @@ h1.title {
 <div class="columns is-centered" style="margin-top: 1.5rem; margin-bottom: 2rem;">
   <div class="column is-four-fifths">
     <figure>
-      <img src="static/image/fig4.png" alt="Fig. 4" style="width: 100%; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <img src="static/image/fig4.png" alt="Fig. 4" style="width: 60%; margin: 0 auto; display: block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
       <figcaption style="margin-top: 0.75rem; font-size: 0.92rem; color: #444; line-height: 1.6;">
         <strong>Fig. 4.</strong> (a) Top view of the designed motor and views of cross-section 1 and cross-section 2 with the corresponding gears. Gear 2 is rotated by 90&deg; relative to Gear 1, which causes a rotational misalignment between Gear 1 and 2 of 10&deg;. (b) Illustration of the movement of the gears at each step corresponding to the sequential pressure applied to the pistons from step 1-1 to 4-2.
       </figcaption>
@@ -130,7 +130,7 @@ h1.title {
 <div class="columns is-centered" style="margin-top: 1.5rem; margin-bottom: 2rem;">
   <div class="column is-four-fifths">
     <figure>
-      <img src="static/image/fig2.png" alt="Fig. 2" style="width: 100%; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <img src="static/image/fig2.png" alt="Fig. 2" style="width: 60%; margin: 0 auto; display: block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
       <figcaption style="margin-top: 0.75rem; font-size: 0.92rem; color: #444; line-height: 1.6;">
         <strong>Fig. 2.</strong> (a) Three-dimensional grid of 125 measurement points for evaluation of magnetic field uniformity in the KRISS Helmholtz coil. (b) Three-dimensional plot of RDBs measured by manually scanning the 125 points in the grid.
       </figcaption>
@@ -153,7 +153,7 @@ h1.title {
 <div class="columns is-centered" style="margin-top: 1.5rem; margin-bottom: 2rem;">
   <div class="column is-four-fifths">
     <figure>
-      <img src="static/image/fig9.png" alt="Fig. 9" style="width: 100%; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <img src="static/image/fig9.png" alt="Fig. 9" style="width: 60%; margin: 0 auto; display: block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
       <figcaption style="margin-top: 0.75rem; font-size: 0.92rem; color: #444; line-height: 1.6;">
         <strong>Fig. 9.</strong> (a) Three-dimensional plot of RDBs measured with the same Helmholtz coil used in Fig. 2 by automatic scanning of 125 points using the developed stepper motors for comparison. (b) Magnetic flux densities at the center (0, 0, 0) and at the position exhibiting the largest RDB measured during three cycles of manual (B<sub>M</sub>) and automatic scanning (B<sub>A</sub>).
       </figcaption>
