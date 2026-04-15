@@ -70,6 +70,17 @@ affiliations:
   </div>
 </div>
 
+<div class="columns is-centered" style="margin-top: 1.5rem; margin-bottom: 2rem;">
+  <div class="column is-four-fifths">
+    <figure>
+      <video src="static/image/pneumatic_motor.mp4" autoplay muted loop playsinline style="width: 100%; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></video>
+      <figcaption style="margin-top: 0.75rem; font-size: 0.92rem; color: #444; line-height: 1.6;">
+        <strong>Video.</strong> Demonstration of the nonmagnetic pneumatic stepper motor in operation.
+      </figcaption>
+    </figure>
+  </div>
+</div>
+
 <div class="content has-text-justified">
   <p>
     The motor's stepping mechanism is based on two sets of gears with a 10° rotational offset. This design allows sequential piston actuation to produce controlled incremental rotation, enabling precise linear translation of the sensor stage.
