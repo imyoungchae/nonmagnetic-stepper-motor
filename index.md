@@ -223,16 +223,6 @@ function switchFigTab(target) {
         <td style="text-align: center;">±0.43%</td>
       </tr>
       <tr>
-        <td>Max RDB Position</td>
-        <td style="text-align: center;">(-2.4, 2.4, 2.4) cm</td>
-        <td style="text-align: center;">(-2.4, 2.4, 2.4) cm</td>
-      </tr>
-      <tr>
-        <td>Readings per Point</td>
-        <td style="text-align: center;">5</td>
-        <td style="text-align: center;">20</td>
-      </tr>
-      <tr>
         <td>Measurement Uncertainty (k=2)</td>
         <td style="text-align: center;">±0.11%</td>
         <td style="text-align: center;">±0.06%</td>
@@ -262,7 +252,7 @@ function switchFigTab(target) {
       The measured magnetic field uniformity was within ±0.43% for the automatic scan, compared to ±0.39% for manual scanning. The difference of only 0.04% is well within the measurement uncertainty of ±0.16% (k=2), confirming that the pneumatic motor introduced <strong>no measurable magnetic interference</strong>. The maximum RDB was observed at the same corner position (-2.4 cm, 2.4 cm, 2.4 cm) in both methods, and the spatial patterns of the 3D field maps were nearly identical.
     </p>
     <p>
-      The automated system also improved measurement quality: by averaging 20 Hall sensor readings per point (instead of 5 in manual mode), the type A uncertainty of the magnetic flux density measurement was reduced from ±110 nT (±0.11%) to ±60 nT (±0.06%). In terms of time efficiency, the total scanning time was reduced from 90 minutes to 50 minutes (~44% reduction), while the required human intervention time decreased dramatically from 90 minutes to just 10 minutes (>80% reduction). Three repeated full scanning cycles confirmed excellent repeatability, with all measurements agreeing within their respective uncertainties.
+      In terms of time efficiency, the total scanning time was reduced from 90 minutes to 50 minutes (~44% reduction), while the required human intervention time decreased dramatically from 90 minutes to just 10 minutes (>80% reduction). Furthermore, the time saved by automation allowed for increasing the number of Hall sensor readings per measurement point from 5 to 20, which reduced the type A uncertainty from ±110 nT (±0.11%) to ±60 nT (±0.06%) — all without a significant increase in total scanning time. Three repeated full scanning cycles confirmed excellent repeatability, with all measurements agreeing within their respective uncertainties.
     </p>
   </div>
 </div>
