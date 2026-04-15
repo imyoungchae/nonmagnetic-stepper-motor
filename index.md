@@ -4,14 +4,14 @@ permalink: /
 
 title: "Automated measurement of magnetic field uniformity in Helmholtz coils<br>using a nonmagnetic stepper motor"
 authors:
-  - Young-Chae Son¹, Sung-Jung Joo², Po-Gyu Park², Changjin Yun³, Soo-Chul Lim¹* and Hyung-Kew Lee²*
+  - Young-Chae Son¹†, Sung-Jung Joo²†, Po-Gyu Park², Changjin Yun³, Soo-Chul Lim¹* and Hyung-Kew Lee²*
 affiliations:
   - ¹ Dongguk University, ² KRISS, ³ KOREA University
 ---
 
 
 <div class="is-size-6 has-text-centered" style="margin-top: -5rem; margin-bottom: 0.5rem; color: #555;">
-  * Corresponding Authors
+  † Equal Contribution &nbsp;&nbsp; * Corresponding Authors
 </div>
 <div class="has-text-centered" style="margin-top: 0.8rem; margin-bottom: 1rem;">
   <p class="is-size-5" style="font-weight: 600;">
@@ -139,7 +139,7 @@ function switchFigTab(target) {
 
 <div class="content has-text-justified">
   <p>
-    The motor's stepping mechanism is based on two sets of nine-tooth gears with a 10° rotational offset. When pressure is applied to a piston, it engages with one gear to latch and lock the axle. A subsequent piston then pushes the second gear, and when the first piston releases, the axle rotates by one step angle. This <strong>Lock-Push-Release</strong> sequence is repeated to produce continuous rotation, and reversing the step order reverses the rotation direction. Eight steps complete a 40° rotation, and nine such cycles produce a full 360° revolution. The use of commercial syringe barrels and rubber bulbs as pressure chambers and seals eliminated the need to re-engineer sealing components, significantly simplifying the fabrication process.
+    The motor's stepping mechanism is based on two sets of nine-tooth gears with a 10° rotational offset. When pressure is applied to a piston, it engages with one gear to latch and lock the axle. A subsequent piston then pushes the second gear, and when the first piston releases, the axle rotates by one step angle. This Lock-Push-Release sequence is repeated to produce continuous rotation, and reversing the step order reverses the rotation direction. Eight steps complete a 40° rotation, and nine such cycles produce a full 360° revolution. The use of commercial syringe barrels and rubber bulbs as pressure chambers and seals eliminated the need to re-engineer sealing components, significantly simplifying the fabrication process.
   </p>
 </div>
 
